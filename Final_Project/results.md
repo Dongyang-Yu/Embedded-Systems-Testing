@@ -227,3 +227,5 @@ Using `llvm-cov-6.0 report ./CoverageReport -instr-profile=bug_lf_analysis_value
 
 
 I think the timeout I used is not sufficient for good fuzzing because it doesn't find my bug. And the timeout that I used is only 10 minutes. In my opinion, the timeout for different testings is not the same, which should depend on the scale of the test function.
+
+Another inspiration I got is that code coverage is not equal to test quality. Even if the code coverage reaches 100%, the test has passed, it does not mean that it fully covers all possible situations in actual use. Just like the fake bug I injected, the fuzzers didn't find it but the coverage was still 100%.
